@@ -30,13 +30,20 @@ app.get('/', async (req, res) => {
     )
 
     for (let element of response?.data?.response?.items) {
+
+        const description = element?.text
+
         let state = element?.attachments.find((el) => el?.type == "link")
         if (state) {
+
+            console.log(state)
+
             let link = state?.link
             states.push({
                 title: link?.title,
                 url: link?.url,
-                photo: link?.photo?.orig_photo?.url
+                photo: link?.photo?.orig_photo?.url,
+                description: description
             })
         }
     }
