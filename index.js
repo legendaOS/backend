@@ -9,7 +9,7 @@ const port = process.env?.port ? process.env?.port : 3000
 const domain = process.env?.domain ? process.env?.domain : "agoi_sochi"
 
 app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Origin", "https://roolegenda.ru");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
