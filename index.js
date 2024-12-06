@@ -46,6 +46,7 @@ app.get('/', async (req, res) => {
         }
     }
 
+    res.set('jopa', 'govno');
     res.json(states)
 
 })
